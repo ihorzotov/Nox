@@ -162,6 +162,8 @@ span,a,label{
 }
 .fp-scroller{
   overflow:hidden!important;
+  transition-duration: 500ms !important;
+  -webkit-overflow-scrolling: touch;
 }
 /*=================================*/
 .section-first{
