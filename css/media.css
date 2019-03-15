@@ -954,13 +954,25 @@
   .tec-item {
     width: 270px;
     left: 50%;
-    top: -25px;
+    top: -20px;
     transform: translateX(-50%);
     height: 80px;
   }
   .tec-item:before {
     height: 0 !important;
     transition-delay: .3s;
+  }
+  .tec-item:after {
+    content: '+';
+    display: block;
+    font-size: 13px;
+    color: #878787;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    z-index: -1;
   }
   .tec-item .tec-item__text {
     width: 100%;
@@ -976,6 +988,10 @@
   .tec-item .tec-item__text > * {
     width: 100% !important;
   }
+  .tec-item.active:after {
+    content: '-';
+    line-height: 12px;
+  }
   .tec-item.active .tec-item__text {
     opacity: 1;
   }
@@ -990,7 +1006,7 @@
     height: 115px !important;
   }
   .tec-item.active.tec-scnd:before {
-    height: 310px !important;
+    height: 305px !important;
   }
   .tec-item.active.tec-thrd:before {
     height: 80px !important;
@@ -1006,17 +1022,22 @@
     bottom: -67px;
     transform: rotate(65deg);
   }
+  .tec-frst:after {
+    right: 36%;
+    bottom: -100%;
+  }
   .tec-frst svg {
     right: 36%;
     bottom: -100%;
   }
-  .tec-frst svg:before {
-    content: '+';
-  }
   .tec-scnd:before {
-    right: 112px;
-    bottom: -266px;
-    transform: rotate(-30.5deg);
+    right: 113px;
+    bottom: -261px;
+    transform: rotate(-30.8deg);
+  }
+  .tec-scnd:after {
+    right: 105px;
+    top: 340px;
   }
   .tec-scnd .tec-item__text:before {
     left: 0;
@@ -1024,12 +1045,16 @@
   }
   .tec-scnd svg {
     right: 105px;
-    top: 345px;
+    top: 340px;
   }
   .tec-thrd:before {
     left: 232px;
     bottom: -87px;
     transform: rotate(28deg);
+  }
+  .tec-thrd:after {
+    left: 225px;
+    bottom: -100px;
   }
   .tec-thrd .tec-item__text:before {
     left: auto;
@@ -1043,6 +1068,10 @@
     left: 153px;
     bottom: -207px;
     transform: rotate(29.4deg);
+  }
+  .tec-frth:after {
+    bottom: -220px;
+    right: 110px;
   }
   .tec-frth .tec-item__text:before {
     left: auto;
@@ -1061,6 +1090,10 @@
     left: 16px;
     bottom: -236px;
     transform: rotate(-4deg);
+  }
+  .tec-fifth:after {
+    left: 10px;
+    top: 315px;
   }
   .tec-fifth svg {
     left: 10px;
