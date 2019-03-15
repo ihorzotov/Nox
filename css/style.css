@@ -826,36 +826,6 @@ span, a, label {
   opacity: 1;
 }
 
-.section-presentation.animation .tec-item:before {
-  height: calc(100% - 78px);
-}
-
-.section-presentation.animation .tec-item__text:before {
-  width: 100%;
-}
-
-.section-presentation.animation .tec-item__text .title, .section-presentation.animation .tec-item__text .text {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.section-presentation.animation .tec-item.tec-thrd:before {
-  height: calc(100% - 40px);
-}
-
-.section-presentation.animation .tec-item.tec-frth:before {
-  height: calc(100% - 22px);
-}
-
-.section-presentation.animation .tec-item.tec-fifth:before {
-  height: calc(100% + 19px);
-}
-
-.section-presentation.animation .tec-item__img {
-  opacity: 1;
-  margin: 0;
-}
-
 .section-presentation.animation circle {
   stroke-dashoffset: 0px !important;
 }

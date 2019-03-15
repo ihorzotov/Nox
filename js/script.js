@@ -94,6 +94,11 @@ $('.hamburger').on('click',function(){
   $('html').toggleClass('overflow');
 });
 
+$('.section-presentation circle').on('click',function(){
+  var parent = $(this).parents('.tec-item');
+  $('.tec-item').not(parent).removeClass('active');
+  parent.toggleClass('active');
+});
 
 
 });//document ready

@@ -643,6 +643,45 @@
     }
   }
 }
+@media (min-width: 720px){
+  .section-presentation{
+    &.animation{
+      .tec-item{
+        &:before{
+          height: calc(100% - 78px);
+        }
+        &__text{
+          &:before{
+            width: 100%;
+          }
+          .title,.text{
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        &.tec-thrd{
+          &:before{
+            height: calc(100% - 40px);
+          }
+        }
+        &.tec-frth{
+          &:before{
+            height: calc(100% - 22px);
+          }
+        }
+        &.tec-fifth{
+          &:before{
+            height: calc(100% + 19px);
+          }
+        }
+        &__img{
+          opacity: 1;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 719px){
   .section-first .woman-bg{
     left: -55px;
@@ -869,8 +908,9 @@
     max-width: 360px;
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translate3d(0,0,0);
     -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0,0,0) translateX(-50%);
   }
   .image-grid__item{
     width: calc(50% - 20px)!important;
@@ -961,6 +1001,145 @@
   .section-grid .grid-medium:first-child{
     padding: 29.2% 0 0;
   }
+  /*presentation*/
+    .section-presentation .bg-circle{
+      width: 300px;
+    }
+    .section-presentation .bg-presentation{
+      height: 300px;
+      width: 255px;
+    }
+    .tec-item{
+      width: 270px;
+      left: 50%;
+      top: -25px;
+      transform: translateX(-50%);
+      height: 80px;
+      &:before{
+        height:0!important;
+        transition-delay: .3s;
+      }
+      .tec-item__text{
+        width: 100%;
+        padding: 0;
+        opacity: 0;
+        &:before{
+          transition-delay: .6s!important;
+        }
+         .title, .text{
+          transition-delay: .7s!important;
+         }
+        &>*{
+          width: 100%!important;
+        }
+      }
+      &.active{
+        .tec-item__text{
+          opacity: 1;
+          &:before{
+            width: 100%;
+          }
+          .title,.text{
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        &.tec-frst:before{
+          height: 115px!important;
+        }
+        &.tec-scnd:before{
+          height: 310px!important;
+        }
+        &.tec-thrd:before{
+          height: 80px!important;
+        }
+        &.tec-frth:before{
+          height: 239px!important;
+        }
+        &.tec-fifth:before{
+          height: 238px!important;
+        }
+      }
+    }
+    .tec-frst{
+      &:before{
+        right: 104px;
+        bottom: -67px;
+        transform: rotate(65deg);
+      }
+      svg{
+        right: 36%;
+        bottom: -100%;
+        &:before{
+          content:'+';
+        }
+      }
+    }
+    .tec-scnd{
+      &:before{
+        right: 112px;
+        bottom: -266px;
+        transform: rotate(-30.5deg);
+      }
+      .tec-item__text{
+        &:before{
+          left:0;
+          right: auto;
+        }
+      }
+      svg{
+        right: 105px;
+        top: 345px;
+      }
+    }
+    .tec-thrd{
+      &:before{
+        left: 232px;
+        bottom: -87px;
+        transform: rotate(28deg);
+      }
+      .tec-item__text{
+        &:before{
+          left:auto;
+          right: 0;
+        }
+      }
+      svg{
+        left: 225px;
+        bottom: -100px;
+      }
+    }
+    .tec-frth{
+      &:before{
+        left: 153px;
+        bottom: -207px;
+        transform: rotate(29.4deg);
+      }
+      .tec-item__text{
+        &:before{
+          left:auto;
+          right: 0;
+        }
+      }
+      svg{
+        top: auto;
+        left: auto;
+        bottom: -220px;
+        right: 110px;
+      }
+    }
+    .tec-fifth{
+      opacity: 1;
+      &:before{
+        left: 16px;
+        bottom: -236px;
+        transform: rotate(-4deg);
+      }
+      svg{
+        left: 10px;
+        top: 315px;
+      }
+    }
 }
 @media (max-width: 575px){
   .section-first__title{

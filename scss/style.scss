@@ -644,39 +644,6 @@ span,a,label{
     .bg-presentation{
       opacity: 1;
     }
-    .tec-item{
-      &:before{
-        height: calc(100% - 78px);
-      }
-      &__text{
-        &:before{
-          width: 100%;
-        }
-        .title,.text{
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      &.tec-thrd{
-        &:before{
-          height: calc(100% - 40px);
-        }
-      }
-      &.tec-frth{
-        &:before{
-          height: calc(100% - 22px);
-        }
-      }
-      &.tec-fifth{
-        &:before{
-          height: calc(100% + 19px);
-        }
-      }
-      &__img{
-        opacity: 1;
-        margin: 0;
-      }
-    }
     circle{
       stroke-dashoffset: 0px!important;
     }
