@@ -870,6 +870,7 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-overflow-scrolling: touch;
   }
   .image-grid__item{
     width: calc(50% - 20px)!important;
