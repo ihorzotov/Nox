@@ -64,7 +64,7 @@ body{
   background-color: #0a0a0a;
   line-height: $line-height;
   color:$color;
-  min-width: 320px;
+  min-width: 360px;
   margin: auto;
   -webkit-overflow-scrolling: touch;
   &.hidden{
@@ -105,10 +105,6 @@ span,a,label{
   position: relative;
   z-index: 2;
   margin-bottom: 35px;
-  &.section-title--large{
-    font-size: 36px;
-    line-height: 40px;
-  }
   &.title--margin{
     margin-bottom: 13px;
   }
@@ -165,7 +161,47 @@ span,a,label{
   transition: background .3s, color .3s;
 }
 /*=================================*/
-
+.section-first{
+  &__title{
+    font-family: 'ExoTwo', sans-serif;
+    text-transform: uppercase;
+    line-height: 54px;
+    font-size: 40px;
+    font-weight: 300;
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    left: 425px;
+    color: #e7aa72;
+    p{
+      padding-left: 80px;
+    }
+  }
+  .section__bg{
+    overflow: hidden;
+  }
+  .wrapper{
+    position: relative;
+    height: 100%;
+  }
+  .woman-bg{
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    left: 0;
+    background: 50% 50% no-repeat;
+    width: 593px;
+    height: 768px;
+  }
+  .product-bg{
+    position: absolute;
+    bottom: 0;
+    right:  -130px;
+    background: 50% 50% no-repeat;
+    width: 831px;
+    height: 500px;
+  }
+}
 /*pagename-main*/
 .page-name__main{
   .header{
@@ -185,9 +221,6 @@ span,a,label{
 /*=================================*/
 .header{
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 1;
   margin-bottom: 40px;
   padding-top: 20px;
@@ -199,6 +232,21 @@ span,a,label{
         margin:0 auto 0;
       }
     }
+  }
+  &-img{
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-img,.hamburger{
+    display: none;
+  }
+  &-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
   &__list{
     display: flex;
@@ -984,6 +1032,7 @@ span,a,label{
         margin-bottom: 20px;
       }
       .description{
+        text-transform: uppercase;
         padding-left: 5px;
         font-size: 21px;
         font-family: 'ExoTwo', sans-serif;
@@ -1100,6 +1149,13 @@ span,a,label{
     margin-right: 13px;
     text-align: center;
     vertical-align: middle;
+  }
+  span{
+    width: calc(100% - 33px );
+  }
+  &__item{
+    display: flex;
+    align-items: flex-start;
   }
   &__item+&__item{
     margin-top: 20px;
@@ -1340,6 +1396,7 @@ span,a,label{
     justify-content: center;
     align-items: center;
     width:100%;
+    color: #929292;
     font-size: 14px;
     background-color: #1a1a1a;
   }

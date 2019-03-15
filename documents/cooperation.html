@@ -11,29 +11,35 @@
 </head>
 <body class="page-name__cooperation hidden-footer">
   <header class="header">
-    <ul class="header__list">
-      <li class="header__item current"><a href="#" class="title">Главная</a></li>
-      <li class="header__item"><a href="#" class="title">Где найти nox</a></li>
-    </ul>
-    <div class="header__logo">
-      <a href="/">
-        <img src="../img/small-logo.png" class="small-logo" alt="Логотип">
-        <img src="../img/Logo.png" class="large-logo" alt="Логотип">
-      </a>
+    <a href="/" class="header-img">
+      <img src="../img/small-logo.png" alt="">
+    </a>
+    <span class="hamburger"></span>
+    <div class="header-content">
+      <ul class="header__list">
+        <li class="header__item current"><a href="#" class="title">Главная</a></li>
+        <li class="header__item"><a href="#" class="title">Где найти nox</a></li>
+      </ul>
+      <div class="header__logo">
+        <a href="/">
+          <img src="../img/small-logo.png" class="small-logo" alt="Логотип">
+          <img src="../img/Logo.png" class="large-logo" alt="Логотип">
+        </a>
+      </div>
+      <ul class="header__list">
+        <li class="header__item"><a href="#" class="title">История</a></li>
+        <li class="header__item dropdown-menu js-togle-parent">
+          <span class="title js-togle">Информация</span>
+          <div class="dropdown-menu__content">
+            <ul class="dropdown-menu__list">
+              <li class="dropdown-menu__item"><a href="#">СОТРУДНИЧЕСТВО</a></li>
+              <li class="dropdown-menu__item"><a href="#">КОНТАКТЫ</a></li>
+              <li class="dropdown-menu__item"><a href="#">СЕРТИФИКАТЫ</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
     </div>
-    <ul class="header__list">
-      <li class="header__item"><a href="#" class="title">История</a></li>
-      <li class="header__item dropdown-menu js-togle-parent">
-        <span class="title js-togle">Информация</span>
-        <div class="dropdown-menu__content">
-          <ul class="dropdown-menu__list">
-            <li class="dropdown-menu__item"><a href="#">СОТРУДНИЧЕСТВО</a></li>
-            <li class="dropdown-menu__item"><a href="#">КОНТАКТЫ</a></li>
-            <li class="dropdown-menu__item"><a href="#">СЕРТИФИКАТЫ</a></li>
-          </ul>
-        </div>
-      </li>
-    </ul>
   </header>
   <main class="main">
     <div class="wrapper">
@@ -44,9 +50,9 @@
            <p class="text">Если вы хотите заключить прямой договор, пришлите ваш запрос на адрес электронной почты <a href="mailto:supoffer@jijo.kok">supoffer@jijo.kok</a></p>
            <p class="title">В письме необходимо указать:</p>
            <ul class="cooperation-list">
-             <li class="cooperation-list__item"><i>1</i>Юридическое название компании</li>
-             <li class="cooperation-list__item"><i>2</i>Ссылка на сайт (если есть)</li>
-             <li class="cooperation-list__item"><i>3</i>Контактную информацию для обратной связи</li>
+             <li class="cooperation-list__item"><i>1</i><span>Юридическое название компании</span></li>
+             <li class="cooperation-list__item"><i>2</i><span>Ссылка на сайт (если есть)</span></li>
+             <li class="cooperation-list__item"><i>3</i><span>Контактную информацию для обратной связи</span></li>
            </ul>
            <p class="text">В случае заинтересованности, наш представитель свяжется с вами по указанным в письме контактам.</p>
          </div>

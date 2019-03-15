@@ -11,36 +11,42 @@
 </head>
 <body class="page-name__history hidden-footer">
   <header class="header">
-    <ul class="header__list">
-      <li class="header__item current"><a href="#" class="title">Главная</a></li>
-      <li class="header__item"><a href="#" class="title">Где найти nox</a></li>
-    </ul>
-    <div class="header__logo">
-      <a href="/">
-        <img src="../img/small-logo.png" class="small-logo" alt="Логотип">
-        <img src="../img/Logo.png" class="large-logo" alt="Логотип">
-      </a>
+    <a href="/" class="header-img">
+      <img src="../img/small-logo.png" alt="">
+    </a>
+    <span class="hamburger"></span>
+    <div class="header-content">
+      <ul class="header__list">
+        <li class="header__item current"><a href="#" class="title">Главная</a></li>
+        <li class="header__item"><a href="#" class="title">Где найти nox</a></li>
+      </ul>
+      <div class="header__logo">
+        <a href="/">
+          <img src="../img/small-logo.png" class="small-logo" alt="Логотип">
+          <img src="../img/Logo.png" class="large-logo" alt="Логотип">
+        </a>
+      </div>
+      <ul class="header__list">
+        <li class="header__item"><a href="#" class="title">История</a></li>
+        <li class="header__item dropdown-menu js-togle-parent">
+          <span class="title js-togle">Информация</span>
+          <div class="dropdown-menu__content">
+            <ul class="dropdown-menu__list">
+              <li class="dropdown-menu__item"><a href="#">СОТРУДНИЧЕСТВО</a></li>
+              <li class="dropdown-menu__item"><a href="#">КОНТАКТЫ</a></li>
+              <li class="dropdown-menu__item"><a href="#">СЕРТИФИКАТЫ</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
     </div>
-    <ul class="header__list">
-      <li class="header__item"><a href="#" class="title">История</a></li>
-      <li class="header__item dropdown-menu js-togle-parent">
-        <span class="title js-togle">Информация</span>
-        <div class="dropdown-menu__content">
-          <ul class="dropdown-menu__list">
-            <li class="dropdown-menu__item"><a href="#">СОТРУДНИЧЕСТВО</a></li>
-            <li class="dropdown-menu__item"><a href="#">КОНТАКТЫ</a></li>
-            <li class="dropdown-menu__item"><a href="#">СЕРТИФИКАТЫ</a></li>
-          </ul>
-        </div>
-      </li>
-    </ul>
   </header>
   <main class="main">
     <div class="wrapper">
       <ul class="history-nav">
         <li class="history-nav__item active" data-target="tab1">Древний МИР</li>
         <li class="history-nav__item" data-target="tab2">СРЕДНЕВЕКОВЬЕ</li>
-        <li class="history-nav__item active" data-target="tab3">ХХ ВЕК</li>
+        <li class="history-nav__item" data-target="tab3">ХХ ВЕК</li>
         <li class="history-nav__item" data-target="tab4">БАМБУКОВЫЙ УГОЛЬ</li>
         <li class="history-nav__item" data-target="tab5">XXI ВЕК</li>
       </ul>

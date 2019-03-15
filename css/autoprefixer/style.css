@@ -173,7 +173,7 @@ body {
   background-color: #0a0a0a;
   line-height: 24px;
   color: #fff;
-  min-width: 320px;
+  min-width: 360px;
   margin: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -213,11 +213,6 @@ span, a, label {
   position: relative;
   z-index: 2;
   margin-bottom: 35px;
-}
-
-.section-title.section-title--large {
-  font-size: 36px;
-  line-height: 40px;
 }
 
 .section-title.title--margin {
@@ -303,6 +298,36 @@ span, a, label {
 }
 
 /*=================================*/
+.section-first .section__bg {
+  overflow: hidden;
+}
+
+.section-first .wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.section-first .woman-bg {
+  position: absolute;
+  top: 60%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  background: 50% 50% no-repeat;
+  width: 593px;
+  height: 768px;
+}
+
+.section-first .product-bg {
+  position: absolute;
+  bottom: 0;
+  right: -130px;
+  background: 50% 50% no-repeat;
+  width: 831px;
+  height: 500px;
+}
+
 /*pagename-main*/
 .page-name__main .header {
   position: fixed;
@@ -323,18 +348,6 @@ span, a, label {
 /*=================================*/
 .header {
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   z-index: 1;
   margin-bottom: 40px;
   padding-top: 20px;
@@ -347,6 +360,31 @@ span, a, label {
 
 .header.sticky .header__logo .small-logo {
   margin: 0 auto 0;
+}
+
+.header-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.header-img, .header .hamburger {
+  display: none;
+}
+
+.header-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .header__list {
@@ -1451,6 +1489,7 @@ span, a, label {
 }
 
 .hero-block__bg .wrapper .description {
+  text-transform: uppercase;
   padding-left: 5px;
   font-size: 21px;
   font-family: 'ExoTwo', sans-serif;
@@ -1635,7 +1674,7 @@ span, a, label {
 }
 
 .cooperation-block__content .text {
-  width: 80%;
+  width: 85%;
   color: #d1d1d1;
 }
 
@@ -1663,6 +1702,22 @@ span, a, label {
   vertical-align: middle;
 }
 
+.cooperation-list span {
+  width: -webkit-calc(100% - 33px);
+  width: calc(100% - 33px);
+}
+
+.cooperation-list__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
 .cooperation-list__item + .cooperation-list__item {
   margin-top: 20px;
 }
@@ -1670,21 +1725,39 @@ span, a, label {
 .cooperation-slider {
   width: -webkit-calc(50% - 25px);
   width: calc(50% - 25px);
-  background: 50% 50% no-repeat;
-  -webkit-background-size: 250px 250px;
-  background-size: 250px 250px;
+  background: 50% 10% no-repeat;
+  -webkit-background-size: 265px 265px;
+  background-size: 265px 265px;
   height: 300px;
   padding: 0 90px;
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .cooperation-slider img {
   position: absolute;
   left: 50%;
   top: -50px;
+  width: 275px;
+  height: 290px;
   -webkit-transform: translatex(-50%);
   -ms-transform: translatex(-50%);
   transform: translatex(-50%);
+}
+
+.cooperation-slider .title {
+  line-height: 1;
 }
 
 .download-block {
@@ -1995,6 +2068,7 @@ span, a, label {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
+  color: #929292;
   font-size: 14px;
   background-color: #1a1a1a;
 }

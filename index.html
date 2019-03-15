@@ -11,35 +11,45 @@
 </head>
 <body class="page-name__main hidden">
   <header class="header">
-    <ul class="header__list">
-      <li class="header__item current"><a href="#" class="title">Главная</a></li>
-      <li class="header__item"><a href="#" class="title">Где найти nox</a></li>
-    </ul>
-    <div class="header__logo">
-      <a href="#section1">
-        <img src="img/small-logo.png" class="small-logo" alt="Логотип">
-        <img src="img/Logo.png" class="large-logo" alt="Логотип">
-      </a>
+    <a href="#section-first" class="header-img">
+      <img src="../img/small-logo.png" alt="">
+    </a>
+    <span class="hamburger"></span>
+    <div class="header-content">
+      <ul class="header__list">
+        <li class="header__item current"><a href="#" class="title">Главная</a></li>
+        <li class="header__item"><a href="#" class="title">Где найти nox</a></li>
+      </ul>
+      <div class="header__logo">
+        <a href="#section-first">
+          <img src="img/small-logo.png" class="small-logo" alt="Логотип">
+          <img src="img/Logo.png" class="large-logo" alt="Логотип">
+        </a>
+      </div>
+      <ul class="header__list">
+        <li class="header__item"><a href="#" class="title">История</a></li>
+        <li class="header__item dropdown-menu js-togle-parent">
+          <span class="title js-togle">Информация</span>
+          <div class="dropdown-menu__content">
+            <ul class="dropdown-menu__list">
+              <li class="dropdown-menu__item"><a href="#">СОТРУДНИЧЕСТВО</a></li>
+              <li class="dropdown-menu__item"><a href="#">КОНТАКТЫ</a></li>
+              <li class="dropdown-menu__item"><a href="#">СЕРТИФИКАТЫ</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
     </div>
-    <ul class="header__list">
-      <li class="header__item"><a href="#" class="title">История</a></li>
-      <li class="header__item dropdown-menu js-togle-parent">
-        <span class="title js-togle">Информация</span>
-        <div class="dropdown-menu__content">
-          <ul class="dropdown-menu__list">
-            <li class="dropdown-menu__item"><a href="#">СОТРУДНИЧЕСТВО</a></li>
-            <li class="dropdown-menu__item"><a href="#">КОНТАКТЫ</a></li>
-            <li class="dropdown-menu__item"><a href="#">СЕРТИФИКАТЫ</a></li>
-          </ul>
-        </div>
-      </li>
-    </ul>
   </header>
   <main class="main">
     <div id="fullpage">
-      <div class="section"  data-anchor="section1">
-        <div class="section__bg" style="background-image: url(img/slide-section1.png);">
-          
+      <div class="section section-first"  data-anchor="section-first">
+        <div class="section__bg">
+          <div class="wrapper">
+            <span class="section-first__title">Ключ к красоте <p>и безупречности</p></span>
+            <div class="woman-bg" style="background-image: url(img/woman.png);"></div>
+            <div class="product-bg" style="background-image: url(img/section1-product.png);"></div>
+          </div>
         </div>
       </div>
       <div class="section product-example">
@@ -157,7 +167,7 @@
           </div>
         </div>
       </div>
-      <div class="section section-grid">
+      <div class="section section-grid" id="asd">
         <div class="wrapper">
           <p class="section-title">КОГДА ЦВЕТ РЕШАЕТ ВСЕ</p>
           <div class="image-grid">
@@ -238,7 +248,7 @@
       </div>
       <div class="section section-grid section-style">
         <div class="wrapper">
-          <p class="section-title section-title--large">СТИЛЬ ВО ВСЕМ И ВСЕГДА</p>
+          <p class="section-title">СТИЛЬ ВО ВСЕМ И ВСЕГДА</p>
           <div class="container">
             <div class="grid-element grid-medium" style="background-image: url(img/grid-medium1.png);"></div>
             <div class="grid-element grid-medium" style="background-image: url(img/grid-medium2.png);"></div>
@@ -250,7 +260,7 @@
         </div>
       </div>
       <div class="section section-footer">
-        <p class="section-title section-title--large">ПРЕМИАЛЬНОЕ КАЧЕСТВО ДЛЯ САМЫХ <br>ТРЕБОВАТЕЛЬНЫХ</p>
+        <p class="section-title">ПРЕМИАЛЬНОЕ КАЧЕСТВО ДЛЯ САМЫХ <br>ТРЕБОВАТЕЛЬНЫХ</p>
         <div class="section__bg" style="background-image: url(img/slide-section5.png);">
         </div>
         <div class="footer">
@@ -291,65 +301,68 @@
   </footer>
 
   <script src="js/jquery-3.2.1.min.js"></script>
+  <!-- <script src="js/jquery.slimscroll.min.js"></script> -->
   <script src="js/fullpage.js"></script>
   <script src="js/script.js"></script>
   <script>
-    // fullpage slider
-    $('#fullpage').fullpage({
-      navigation: false,
-      anchors: ['section1'],
-      afterLoad: function(anchor, index) {
-        $('.section').eq(index - 1).addClass('animation');
-      },
-       onLeave: function(anchor, index) {
-        if(index !== 1){
-          $('.header').addClass('sticky');
-        }else{
-          $('.header').removeClass('sticky');
+    $(document).ready(function(){
+      // fullpage slider
+      $('#fullpage').fullpage({
+        navigation: false,
+        anchors: ['section-first'],
+        afterLoad: function(anchor, index) {
+          $('.section').eq(index - 1).addClass('animation');
+        },
+         onLeave: function(anchor, index) {
+          if(index !== 1){
+            $('.header').addClass('sticky');
+          }else{
+            $('.header').removeClass('sticky');
+          }
+          $('.modal-zoom.active').removeClass('active');
         }
-        $('.modal-zoom.active').removeClass('active');
-      }
-    });
-    $('.page-name__main').removeClass('hidden');
+      });
+      $('.page-name__main').removeClass('hidden');
 
-//  mousemoveAnimation
-    (function(){
-      var oldMouseY = 0,
-          oldMouseX = 0;
-      $(document).on('mousemove', 'path', function(event){
-        var mouseY = event.pageY,
-            mouseX = event.pageX,
-            koef = .05,
-            positionY = mouseY * koef,
-            positionX = mouseX * koef,
-            parents = $(this).parents('.paralax-element'),
-            widthHalf = parents.width() / 2;
+  //  mousemoveAnimation
+      (function(){
+        var oldMouseY = 0,
+            oldMouseX = 0;
+        $(document).on('mousemove', 'path', function(event){
+          var mouseY = event.pageY,
+              mouseX = event.pageX,
+              koef = .05,
+              positionY = mouseY * koef,
+              positionX = mouseX * koef,
+              parents = $(this).parents('.paralax-element'),
+              widthHalf = parents.width() / 2;
 
-        if(oldMouseX > mouseX && ( parents.position().left + widthHalf ) > mouseX){
-          positionX *= -1;
-        };
+          if(oldMouseX > mouseX && ( parents.position().left + widthHalf ) > mouseX){
+            positionX *= -1;
+          };
 
-        // if(oldMouseY > mouseY){
-        //   positionY *= -1;
-        // };
+          // if(oldMouseY > mouseY){
+          //   positionY *= -1;
+          // };
 
-        parents.css({
-          //"margin-top": positionY +'px',
-          "margin-left":positionX +'px',
+          parents.css({
+            //"margin-top": positionY +'px',
+            "margin-left":positionX +'px',
+          });
+
+          parents.addClass('transiton');
+
+          oldMouseX = mouseX;
+          oldMouseY = mouseY;
         });
 
-        parents.addClass('transiton');
-
-        oldMouseX = mouseX;
-        oldMouseY = mouseY;
-      });
-
-      $(document).on('mouseout', 'path', function(event){
-        $(this).parents('.paralax-element').css({
-          "transform": 'translate( 0 )',
+        $(document).on('mouseout', 'path', function(event){
+          $(this).parents('.paralax-element').css({
+            "transform": 'translate( 0 )',
+          });
         });
-      });
-    }());
+      }());
+    });//document-ready
   </script>
 </body>
 </html>
