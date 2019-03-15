@@ -281,7 +281,6 @@ span, a, label {
 .fp-scroller {
   overflow: hidden !important;
   transition-duration: 500ms !important;
-  -webkit-overflow-scrolling: touch;
 }
 
 /*=================================*/
@@ -741,6 +740,15 @@ span, a, label {
   height: 100%;
   left: 0;
   top: 0;
+}
+
+.paralax-element img {
+  position: relative;
+  transition: all 400ms ease-in-out;
+}
+
+.paralax-element img.move {
+  transition: 0s !important;
 }
 
 .element-shirt {

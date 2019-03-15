@@ -827,6 +827,7 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-overflow-scrolling: touch;
   }
   .image-grid__item {
     width: calc(50% - 20px) !important;
@@ -887,8 +888,8 @@
   .image-grid__item:nth-child(12) {
     order: 11;
   }
-  .section-grid {
-    padding-top: 90px;
+  .section-grid .slimScrollDiv {
+    padding-top: 70px;
   }
   .section-style {
     padding-top: 0;
@@ -1054,6 +1055,12 @@
   .section-footer .section__bg {
     background: 55% 40% no-repeat;
     background-size: 225%;
+  }
+  .hidden-footer.active-footer .footer, .page-name__certificate.active-footer .footer, .page-name__contacts.active-footer .footer {
+    height: 308px;
+  }
+  .page-name__history.hidden-footer .main {
+    min-height: calc(100vh - 69px);
   }
   /*footer*/
   .footer-content {

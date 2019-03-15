@@ -163,7 +163,6 @@ span,a,label{
 .fp-scroller{
   overflow:hidden!important;
   transition-duration: 500ms !important;
-  -webkit-overflow-scrolling: touch;
 }
 /*=================================*/
 .section-first{
@@ -574,7 +573,14 @@ span,a,label{
     left: 0;
     top: 0;
   }
+  img{
+    position: relative;
+    transition: all 400ms ease-in-out;
+    &.move {
+      transition: 0s!important;
+    }
 
+  }
 }
 .element-shirt{
   left: 0;
