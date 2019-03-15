@@ -278,6 +278,10 @@ span, a, label {
   transition: background .3s, color .3s;
 }
 
+.fp-scroller {
+  overflow: hidden !important;
+}
+
 /*=================================*/
 .section-first__title {
   font-family: 'ExoTwo', sans-serif;

@@ -301,15 +301,17 @@
   </footer>
 
   <script src="js/jquery-3.2.1.min.js"></script>
-  <!-- <script src="js/jquery.slimscroll.min.js"></script> -->
+  <script src="js/jquery.slimscroll.min.js"></script>
   <script src="js/fullpage.js"></script>
   <script src="js/script.js"></script>
   <script>
     $(document).ready(function(){
       // fullpage slider
+      var settings = ($(window).width() < 720)? true : false;
       $('#fullpage').fullpage({
         navigation: false,
         anchors: ['section-first'],
+        scrollOverflow:settings,
         afterLoad: function(anchor, index) {
           $('.section').eq(index - 1).addClass('animation');
         },

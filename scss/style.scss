@@ -160,6 +160,9 @@ span,a,label{
   letter-spacing: .9px;
   transition: background .3s, color .3s;
 }
+.fp-scroller{
+  overflow:hidden!important;
+}
 /*=================================*/
 .section-first{
   &__title{

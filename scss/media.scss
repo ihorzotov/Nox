@@ -187,7 +187,8 @@
   }
   .section-first__title{
     top: 130px;
-    left: 120px
+    left: 120px;
+    font-size: 48px;
   }
   /*hero-block*/
   .hero-block{
@@ -929,6 +930,12 @@
       order: 11;
     }
   }
+  .section-grid{
+    padding-top: 90px
+  }
+  .section-style{
+    padding-top: 0;
+  }
   .section-grid .container {
     margin: 0 0 -15px -15px;
   }
@@ -953,6 +960,12 @@
   }
 }
 @media (max-width: 575px){
+  .section-first__title{
+    top: 80px;
+    left: 20px;
+    font-size: 28px;
+    line-height: 38px;
+  }
   .dropdown-menu{
     .dropdown-menu__content{
       background: transparent;
