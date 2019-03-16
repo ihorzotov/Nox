@@ -20,7 +20,14 @@ $(document).ready(function() {
       $('.modal-zoom').removeClass('active');
     }
   });
+  $(document).on('click', function(event){
+    var if_neededelement = $(event.target).parents('.dropdown-menu__content').length,
+        if_thisbutton = $(event.target).hasClass('dropdown-menu')? true: $(event.target).parents('.dropdown-menu').length > 0? true: false;
 
+    if(!if_thisbutton && !if_neededelement){
+      $('.dropdown-menu').removeClass('active');
+    }
+  });
   $('.footer-arrow').on('click', function() {
     $('body').toggleClass('active-footer');
   });

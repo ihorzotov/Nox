@@ -145,6 +145,12 @@
   .section-presentation.animation .tec-item.tec-frth:before {
     height: calc(100% - 94px);
   }
+  .cooperation-slider {
+    padding: 0 80px;
+  }
+  .history-nav__item + .history-nav__item:after {
+    width: 61px;
+  }
 }
 
 @media (max-width: 959px) {
@@ -291,6 +297,13 @@
   }
   .page-name__cooperation.hidden-footer {
     padding-bottom: 70px;
+  }
+  .history-nav__item + .history-nav__item:before {
+    left: -16px;
+  }
+  .history-nav__item + .history-nav__item:after {
+    width: 48px;
+    right: calc(100% + 8px);
   }
   .history-content {
     margin: 0 -15px;
@@ -750,6 +763,14 @@
   .footer-info {
     padding-left: 0;
   }
+  /**/
+  .history-nav__item + .history-nav__item:before {
+    left: -30px;
+  }
+  .history-nav__item + .history-nav__item:after {
+    width: 50px;
+    right: calc(100% + 20px);
+  }
   .history-nav {
     width: auto;
     white-space: nowrap;
@@ -1200,7 +1221,7 @@
     font-size: 12px;
   }
   .hero-block .form__label {
-    margin: 0 0 20px 0 !important;
+    margin: 0 0 30px 0 !important;
   }
   .hero-block .form__label, .hero-block .standart-btn {
     width: 100%;
@@ -1236,7 +1257,7 @@
     width: 100%;
   }
   .section-footer .section__bg {
-    background: 55% 40% no-repeat;
+    background: 55% 30% no-repeat;
     background-size: 225%;
   }
   .hidden-footer.active-footer .footer, .page-name__certificate.active-footer .footer, .page-name__contacts.active-footer .footer {
